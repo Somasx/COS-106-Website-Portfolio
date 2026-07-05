@@ -1,4 +1,8 @@
 /* --- RESET & VARIABLES CONFIGURATION --- */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 :root {
     --bg-primary: #0f172a;
     --bg-secondary: #1e293b;
@@ -231,37 +235,13 @@ main {
 
 .skills-list li, .hobbies-list li {
     margin-bottom: 0.8rem;
-    display: flex;
+    display: grid;
     align-items: center;
     gap: 0.8rem;
 }
 
 .skills-list i { color: var(--accent-color); }
 .hobbies-list i { color: var(--success-color); }
-
-.multimedia-container {
-    background-color: var(--bg-secondary);
-    padding: 2rem;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    text-align: center;
-}
-
-.multimedia-container h3 {
-    margin-bottom: 1.5rem;
-}
-
-.multimedia-container video {
-    max-width: 700px;
-    border-radius: 6px;
-    border: 1px solid var(--border-color);
-    margin-bottom: 1rem;
-}
-
-.multimedia-container .caption {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
 
 /* --- 3. PROJECTS SECTION --- */
 .projects-grid {
@@ -304,7 +284,23 @@ main {
     height: 80px;
     overflow: hidden;
 }
+.project-card {
+    display: flex;
+    flex-direction: column;
+}
 
+.project-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.project-info p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
 .project-link {
     color: var(--accent-color);
     text-decoration: none;
@@ -331,7 +327,7 @@ main {
 }
 
 .input-group {
-    display: flex;
+    display: grid;
     gap: 1rem;
     margin-bottom: 2.5rem;
 }
@@ -538,5 +534,20 @@ footer p {
     }
     .nav-links {
         gap: 1rem;
+    }
+}
+@media (max-width: 100px) {
+    .input-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-group input,
+    #add-task-btn {
+        width: 100%;
+    }
+
+    #add-task-btn {
+        padding: 0.8rem;
     }
 }
