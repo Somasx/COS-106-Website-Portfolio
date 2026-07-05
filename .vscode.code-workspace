@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../../../.vscode"
+		},
+		{
+			"path": "../Hooked By Sommie"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../photos"
+		},
+		{
+			"path": "pinterest photo"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Soma"
+	}
+}
